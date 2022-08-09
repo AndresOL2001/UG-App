@@ -1,0 +1,83 @@
+*, * :before, * :after{
+  box-sizing: border-box;
+}
+
+
+.pageContent{
+    margin-top: 190px;
+}
+.contenedorSearch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search {
+  width: 62vw;
+  position: relative;
+  display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border-right: none;
+    padding: 14px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+  }   
+  .icon{
+    font-size: 20px;
+   }
+  .searchButton {
+    width: 59px;
+    height: 47px;
+    border: 1px solid #000000;
+    border-left: none;
+    background: #253f60;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+
+}
+  
+  .contenedorInput{
+    position: absolute;
+    top: 37%;
+  }
+
+  .contenedorSecundario{
+    margin: 98px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 134px;
+  }
+
+
+.user-box{
+  width: 495px;
+  height: 216px;
+  padding: 1.8rem;
+  font-family: Roboto, sans-serif;
+  border: 1px solid black;
+    border-radius: 15px;
+  margin: 0px 75px 62px;
+}
+
+.title{
+  color: black;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+.box-description{
+  font-size: 22px;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}

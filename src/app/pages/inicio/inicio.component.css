@@ -1,0 +1,111 @@
+/*Estilos definidos para toda la pantalla*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Estilos section 1*/
+
+.contenedorSpace{
+      padding: 10px;
+    text-align: left;
+    margin: 190px 123px -160px;
+    
+  }
+
+  .subtitle{
+    margin-bottom: 46px;
+    font-size: 34px;
+    font-style: normal;
+    letter-spacing: 1.8px;
+  }
+  
+  .about {
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 164px;
+  }
+  .about_img {
+    text-align: center;
+  }
+  
+  .about_img--left {
+    text-align: left;
+
+  }
+  .aboutpicture {
+    width: 400px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 56px;
+  }
+  .about_Text {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: .2px;
+    position: relative;
+    bottom: 142px;
+  }
+  
+ 
+  /*Segunda section estilos*/
+
+  .primero{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 80px;
+  }
+
+  .contenedorSecundario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 134px;
+  }
+
+
+.user-box{
+  width: 495px;
+  height: 216px;
+  padding: 1.8rem;
+  font-family: Roboto, sans-serif;
+  border: 1px solid black;
+    border-radius: 15px;
+  margin: 0px 75px 62px;
+}
+
+.title{
+  color: black;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+.box-description{
+  font-size: 22px;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+ 
+/* estilos boton ligamientos*/
+
+button.lineamientos_styles{
+  width: 65%;
+  height: 50px;
+  border-radius: 9px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}

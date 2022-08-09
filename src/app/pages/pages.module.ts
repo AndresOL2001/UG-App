@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
-import { ConsultasComponent } from './consultas/consultas.component';
+import { acercaDeComponent } from './acercaDe/acercaDe.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { ProduccionesComponent } from './producciones/producciones.component';
-import { ValidacionComponent } from './validacion/validacion.component';
+import { eventosComponent } from './eventos/eventos.component';
+import { produccionesComponent } from './producciones/producciones.component';
 
 
 @NgModule({
-  declarations: [ConsultasComponent,InicioComponent,ProduccionesComponent,ValidacionComponent],
+  declarations: [acercaDeComponent,InicioComponent,eventosComponent,produccionesComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
   ],
-  exports:[ConsultasComponent,InicioComponent,ProduccionesComponent,ValidacionComponent]
+  exports:[acercaDeComponent,InicioComponent,eventosComponent,produccionesComponent]
 })
 export class PagesModule { }

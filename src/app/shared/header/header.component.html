@@ -1,1 +1,43 @@
-<p>header works!</p>
+
+<div class="contenedor_navbarBanner">
+<div class="banner">
+    <div class="banner__content">
+      <div class="banner__text">
+        <img class="imgLogo" src="../../../assets/img/portadaBanner.png" alt="logo:Universidad">
+    </div>
+      <button class="banner__close" type="button">
+        <span class="material-icons">
+          close
+        </span>
+      </button>
+    </div>
+  </div>
+
+
+
+<header class="header">
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a [routerLink]="'/inicio'" class="nav-menu-link nav-link nav-menu-link_active">Inicio</a>
+        </li>
+        <li class="nav-menu-item">
+          <a [routerLink]="'/acercaDe'"   class="nav-menu-link nav-link">Acerca de</a>
+        </li>
+        <li class="nav-menu-item">
+          <a [routerLink]="'/producciones'"  class="nav-menu-link nav-link">Producciones</a>
+        </li>
+        <li class="nav-menu-item">
+          <a [routerLink]="'/eventos'"  class="nav-menu-link nav-link">Eventos</a>
+        </li>
+        <li class="nav-menu-item">
+            <a href="/auth/login" class="nav-menu-link nav-link">Iniciar Sesion</a>
+          </li>
+      
+      </ul>
+    </nav>
+  </header>
+</div>

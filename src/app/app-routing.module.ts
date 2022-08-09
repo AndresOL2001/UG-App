@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { ProduccionesComponent } from './pages/producciones/producciones.component';
-import { ValidacionComponent } from './pages/validacion/validacion.component';
+import { eventosComponent } from './pages/eventos/eventos.component';
+import { produccionesComponent } from './pages/producciones/producciones.component';
+import { acercaDeComponent } from '../app/pages/acercaDe/acercaDe.component';
+import { InicioAdmiComponent } from './admi/inicio-admi/inicio-admi.component';
 
 const routes: Routes = [
   {
@@ -10,12 +12,20 @@ const routes: Routes = [
     component:InicioComponent,
   },
   {
-    path:'validacion',
-    component:ValidacionComponent
+    path:'acercaDe',
+    component:acercaDeComponent
   },
   {
     path:'producciones',
-    component:ProduccionesComponent
+    component:produccionesComponent
+  },
+  {
+    path:'eventos',
+    component:eventosComponent
+  },
+  {
+    path:'admi',
+    component:InicioAdmiComponent,
   },
   {
     path:'auth',
