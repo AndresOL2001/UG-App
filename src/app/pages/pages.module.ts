@@ -9,9 +9,10 @@ import { consultasComponent } from './Consultas/consultas.component';
 import { PCientificasComponent } from './p-cientificas/p-cientificas.component';
 import { ConsultaspublicasComponent } from './consultaspublicas/consultaspublicas.component';
 import { HistorialpcientificasComponent } from './historialpcientificas/historialpcientificas.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
-  declarations: [acercaDeComponent,InicioComponent,eventosComponent,consultasComponent, PCientificasComponent, ConsultaspublicasComponent, HistorialpcientificasComponent],
+  declarations: [acercaDeComponent,InicioComponent,eventosComponent,consultasComponent, PCientificasComponent, ConsultaspublicasComponent, HistorialpcientificasComponent, ContactoComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
