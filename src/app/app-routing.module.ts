@@ -5,6 +5,9 @@ import { eventosComponent } from './pages/eventos/eventos.component';
 import { consultasComponent } from './pages/Consultas/consultas.component'
 import { acercaDeComponent } from '../app/pages/acercaDe/acercaDe.component';
 import { InicioAdmiComponent } from './admi/inicio-admi/inicio-admi.component';
+import { ConsultaspublicasComponent } from './pages/consultaspublicas/consultaspublicas.component';
+import { PCientificasComponent } from './pages/p-cientificas/p-cientificas.component';
+import { HistorialpcientificasComponent } from './pages/historialpcientificas/historialpcientificas.component';
 
 const routes: Routes = [
   {
@@ -22,6 +25,18 @@ const routes: Routes = [
   {
     path:'eventos',
     component:eventosComponent
+  },
+  {
+    path:'consultasPublicas',
+    component:ConsultaspublicasComponent
+  },
+  {
+    path:'pCientificas',
+    component:PCientificasComponent
+  },
+  {
+    path:'historialpCientificas',
+    component:HistorialpcientificasComponent
   },
   {
     path:'admi',

@@ -11,12 +11,12 @@
     margin: 190px 123px 0;
   }
 
-  .containerEv{
 
+  .containerEv{
     padding: 40px 30px;
     border-radius: 18px;
     background: linear-gradient(145deg, #f0f0f0, #ffffff);
-    box-shadow: 26px 26px 52px #cacaca, -26px -26px 52px #ffffff;
+    cursor: pointer;
 
   }
   .subtitle{

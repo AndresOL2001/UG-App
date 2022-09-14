@@ -1,0 +1,140 @@
+
+.calendar{
+    position: relative;
+    top: 16em;
+    left: 50em;
+    background-color: #fff;
+    width: 30%;
+    height: 374px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 15px solid #fff;
+border:1px solid rgb(0 0 0 / 50%);
+}
+.calendar .date{
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box; 
+}
+.calendar .date h3{
+    margin: 0 0 20px; 
+    padding: 0;
+    font-size: 24px; 
+    font-weight: 500; 
+    text-align: center; 
+    user-select: none; 
+    text-transform: capitalize;
+}
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar .date .days .number.active{
+    background-color: #362b48;
+    color: #fff;
+    cursor: pointer; 
+    border-radius: 50%; 
+}
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1){
+    font-weight: 600;
+}
+
+
+
+.contenedor {
+    padding: 10px;
+  text-align: left;
+  margin: 190px 123px 0;
+}
+
+
+.contenedorConsultas{
+  display: grid;
+  border: 1px solid black;
+  top: 15em;
+  width: 80em;
+  position: relative;
+  left: 26px;
+
+}
+
+.containerEv{
+
+  padding: 40px 30px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+
+}
+.subtitle{
+  margin-bottom: 15px;
+
+}
+
+.about {
+  min-height: 100px;
+  display: grid;
+  row-gap: 80px;
+  justify-items: center;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 164px;
+}
+
+
+.breadcrumbs{
+  padding: 10px;
+  
+}
+
+.breadcrumbs__item{
+  display: inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after{
+  content: '/';
+  margin: 0 5px;
+  color: #362b48;
+}
+
+.breadcrumbs__link{
+  text-decoration: none;
+  color: #999999;
+
+}
+
+.breadcrumbs__link:hover{
+  color: #362b48;
+  text-decoration: underline;
+}
+
+
+.contentdivsborder{
+  display: flex;
+}
+
+.bordercontent{
+  height: 20em;
+  border: 1px solid black;
+  width: 100%;
+  margin: 0 50px;
+  gap: 14px;
+}
+
+.bordercontent span{
+  display: flex;
+align-items: center;
+justify-content: center;
+padding: 14px;
+
+}
