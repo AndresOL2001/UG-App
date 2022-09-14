@@ -7,6 +7,7 @@ import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { InicioAdmiComponent } from './admi/inicio-admi/inicio-admi.component';
 import { ConfiguracionComponent } from './admi/configuracion/configuracion.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ConfiguracionComponent } from './admi/configuracion/configuracion.compo
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    SharedModule
+    SharedModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

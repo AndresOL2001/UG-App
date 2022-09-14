@@ -57,6 +57,73 @@
     background-color: #034574;
     transition: 0.5s;
   }
+
+  .menu-button{
+    background-color: transparent;
+    font-size: 19px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    width: 7em;
+
+  }
+
+/*   .right-menu:hover{
+    background-color: #034574;
+    transition: 0.5s;  } */
+
+   .right-menu .dropdown-menu a:hover {
+       background: red;
+  }
+
+  .dropdown-menu{
+    background-color: #034574;
+    width: 7em;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 0.6em;
+    z-index: 9;
+  }
+
+  .dropdown2{
+    width: 9em;
+  }
+  .dropdown-menu a{
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 7em;
+ text-decoration: none;
+ color: rgb(255, 255, 255);
+
+}
+
+.dropdown-menu a:hover{
+  background-color: #03457485;
+
+}
+
+  .right-menu:hover .dropdown-menu {
+    display: block;
+
+  }
+
+    .right-menu:hover .dropdown-menu {
+    display: block;
+
+  }
+
+
+
+  .right-menu:hover .menu-button{
+    background-color: transparent;
+  } 
   
   /* TOGGLE */
   .nav-toggle {
