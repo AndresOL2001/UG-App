@@ -1,0 +1,30 @@
+<div class="contenedorPadre">
+    <h1>Mis Producciones Cientificas</h1>
+    <div style="margin-top:20px;">
+    <table style="margin: 0 auto;" class="styled-table">
+        
+        <thead>
+            <tr>
+                <th>Correo</th>
+                <th>Celular</th>
+                <th>Mensaje</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mensaje of mensajes">
+                <td>{{mensaje.correo}}</td>
+                <td>{{mensaje.celular}}</td>
+                <td>{{mensaje.mensaje}}</td>
+                <td>
+                    <button (click)="accion(mensaje)" style="text-align: center;"  class="button">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+
+                </td>
+            </tr>
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</div>
+</div>

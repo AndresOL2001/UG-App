@@ -1,0 +1,152 @@
+<div class="contenedorPadre">
+    <form class="formulario">
+        <h1>Completa todos los campos </h1>
+
+         <div class="contenedor">
+     
+         <div class="input-contenedor">
+            <i class="fas fa-sort-numeric-up-alt icon"></i>
+            <input type="text"  placeholder="Codigo UG">
+         </div>
+
+         
+         <div class="input-contenedor">
+            <i class="fas fa-heading icon"></i>
+            <input type="text" placeholder="Titulo del libro">
+         </div>
+         <div class="input-contenedor">
+            <i class="fas fa-sort-numeric-up-alt icon"></i>
+            <input type="text" placeholder="Codigo ISBN">
+         </div>
+   
+            
+            <div class="input-contenedor">
+                <i class="fas fa-book-open icon"></i>
+            <input type="text" placeholder="Editor">
+            </div>
+        </div>
+           <div class="contenedor">
+     
+            <div class="input-contenedor">
+                <i class="fas fa-sort-numeric-up-alt icon"></i>
+                <input type="text"  placeholder="Número de paginas">
+            </div>
+   
+            
+            <div class="input-contenedor">
+                <i class="fas fa-calendar-check icon"></i>
+               <input type="text" placeholder="Fecha de publicación">
+               </div>
+            <div class="input-contenedor">
+                <i class="fas fa-link icon"></i>
+               <input type="text"  placeholder="Link de la publicación">
+               </div>
+      
+               <div class="input-contenedor">
+                <i class="fas fa-info-circle icon"></i>
+            <input type="text"  placeholder="Campo detallado">
+            </div>
+           </div>
+
+           <div class="contenedor">
+     
+            <div class="input-contenedor">
+                <i class="fas fa-sort-numeric-up-alt icon"></i>
+                <input type="text"  placeholder="Afiliación UG">
+            </div>
+   
+            
+                <div class="input-contenedor">
+                    <i class="fas fa-check-double icon"></i>
+                <input type="text" placeholder="Revisión por pares">
+                </div>
+
+                <div class="input-contenedor">
+                    <i class="fas fa-external-link-alt icon"></i>
+                <input type="text" placeholder="Dominio Cientifico">
+                </div>
+           
+                <div class="input-contenedor">
+                    <i class="fas fa-user-tie icon"></i>
+                   <input type="text"  placeholder="Linea de investigación">
+                   </div>
+               
+               
+              
+           </div>
+
+           <div class="contenedor">
+
+            <div class="input-contenedor">
+                <i class="fas fa-user-tie icon"></i>
+               <input type="text" placeholder="Sublinea de investigación">
+               </div>
+     
+            <div class="input-contenedor">
+                <i class="fas fa-heading icon"></i>
+                <input type="text"  placeholder="Titulo del proyecto FCI">
+            </div>
+        
+            
+            <div class="input-contenedor">
+                <i class="far fa-thumbs-up icon"></i>
+                <input type="text"  placeholder="Validado CIGC">
+                </div>
+                <div class="input-contenedor">
+                    <i class="fas fa-search icon"></i>
+                     <input type="text" placeholder="Observación CIGC">
+                </div>
+                
+            </div>     
+            <div>
+                <button class="drop-togglemaestros btn flat" (click)="showDropDownMaestros=!showDropDownMaestros">
+                    <span *ngIf="listaMaestrosChecados.length<=0">Seleccione los docentes</span>
+                    <span *ngIf="listaMaestrosChecados.length>0">{{listaMaestrosChecados.join(', ') | slice:0:25}}</span>
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="drop-showmaestros" *ngIf="showDropDownMaestros">
+                    <label *ngFor="let x of maestroslist">
+                        <input [ngModelOptions]="{standalone: true}" type="checkbox" [(ngModel)]="x.checked"
+                            (change)="obtenerMaestrosSeleccionados(x.checked,x.name)" />
+                        <span>{{x.name}}</span>
+                    </label>
+                </div>
+            </div>
+            <div class="parent-wrapper">
+                <div class="parent" *ngIf="listaMaestrosOficial.length>0">
+                    <div class="child"*ngFor="let maestro of listaMaestrosOficial">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" [value]="maestro.name">
+                        </div>
+    
+                        <div class="input-contenedor">
+                            <i class="fas fa-list icon"></i>
+                            <input type="text" placeholder="Tipo de Participación">
+                        </div>
+    
+                        <div class="input-contenedor">
+                            <i class="fas fa-school icon"></i>
+                            <input type="text" placeholder="Facultad">
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom:20px;" *ngIf="visualizar">
+                <textarea disabled style="resize: none;" rows="15" cols="120" type="text" placeholder="Notas"></textarea>
+            </div>
+    
+            <div *ngIf="!visualizar" class="centrar-boton">
+                <button class="button">Publicar Libro</button>
+            </div>
+            <div *ngIf="visualizar" class="centrar-boton">
+                <button class="button">Volver a publicar Libro</button>
+            </div>
+
+     
+    </form>
+
+</div>

@@ -1,0 +1,44 @@
+
+.contenedorPrincipal{
+    align-items: center;
+    margin-top: 230px;
+}
+
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+
+.about {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .container {
+    padding: 10px;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+
+  .containerEv{
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    padding: 40px 30px;
+    border-radius: 18px;
+    background:  #315481;
+    color: white;
+    font-size: 24px;
+    font-weight: 100 !important;
+    cursor:pointer
+  }  
+
+  .contenedorSection{
+    display: flex;
+    justify-content: center;
+  }

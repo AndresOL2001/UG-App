@@ -1,0 +1,171 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:host /deep/ ngb-datepicker-month {
+  pointer-events: none !important;
+  }
+.contenedorPrincipal{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.calendar{
+    position: relative;
+    top: 16em;
+    left: 50em;
+    background-color: #fff;
+    width: 30%;
+    height: 374px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 15px solid #fff;
+}
+.calendar .date{
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box; 
+}
+.calendar .date h3{
+    margin: 0 0 20px; 
+    padding: 0;
+    font-size: 24px; 
+    font-weight: 500; 
+    text-align: center; 
+    user-select: none; 
+    text-transform: capitalize;
+}
+.calendar .date .days{
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar .date .days .number.active{
+    background-color: #362b48;
+    color: #fff;
+    cursor: pointer; 
+    border-radius: 50%; 
+}
+.calendar .date .days .day,
+.calendar .date .days .number{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1){
+    font-weight: 600;
+}
+
+
+
+.contenedor {
+    padding: 10px;
+  text-align: left;
+  margin: 50px 123px 0;
+}
+
+
+.contenedorConsultas{
+  top: 15em;
+  width: 80em;
+  left: 26px;
+
+}
+
+.containerEv{
+
+  padding: 40px 30px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  background:  #315481;
+  color: white;
+
+}
+.subtitle{
+  margin-bottom: 15px;
+
+}
+
+.about {
+  min-height: 100px;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.breadcrumbs{
+  padding: 10px;
+  margin-top: 200px;
+  
+}
+
+.breadcrumbs__item{
+  display: inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after{
+  content: '-';
+  margin: 0 5px;
+  color: #362b48;
+}
+
+.breadcrumbs__link{
+  text-decoration: none;
+  color: #999999;
+
+}
+
+.breadcrumbs__link:hover{
+  color: #362b48;
+  text-decoration: underline;
+}
+
+
+.contentdivsborder{
+  display: flex;
+  width: 100%;
+}
+
+li{
+  margin-bottom: 10px;
+  margin-left:20px;
+  text-align:justify ;
+}
+
+.bordercontent{
+  height: 25em;
+  width: 48%;
+  /* margin: 0 50px; */
+  margin-top: 18px;
+  margin-right: 100px;
+  gap: 14px;
+}
+
+.bordercontent h3{
+  display: flex;
+align-items: center;
+justify-content: center;
+padding: 14px;
+margin-bottom: 20px;
+
+}
+/*calenario*/
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range, .custom-day:hover {
+  background-color: rgb(2, 117, 216);
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba(2, 117, 216, 0.5);
+}

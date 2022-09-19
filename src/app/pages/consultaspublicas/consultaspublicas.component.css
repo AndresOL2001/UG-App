@@ -1,0 +1,236 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+    box-sizing: border-box;
+}
+.contenedor{
+    margin-top: 250px;
+    margin-bottom: 220px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.contenedor-drops{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.col{
+    height: 55px;
+}
+
+.row{
+    width: 80%;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #253f60;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
+
+}
+.styled-table td {
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 50px;
+}
+
+.styled-table tbody tr {
+    
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #253f60;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #253f60;
+}
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    background: #253f60;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: cadetblue;
+}
+
+/*Dropdown */
+.drop-toggle{
+   /*  background-color: #fff; */
+    border: none;
+    padding: 5px 10px;
+    /* border-radius: 4px; */
+    color:#757575;
+    font-size: 20px;
+    cursor: pointer;
+    cursor: hand;
+    border: 1px solid #ccc;
+    width: 285px;
+    margin-right: 20px;
+    height: 46px;
+    text-align: left;
+}
+.drop-toggle i{
+    float:right;
+}
+.drop-show {
+    padding: 8px;
+    width: 285px;
+    background-color: #FFF;
+    border: 1px solid #BABABA;
+    position: absolute;
+    z-index: 100;
+    -webkit-box-shadow: 0 6px 10px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 6px 10px rgba(0,0,0,.15);
+    box-shadow: 0 6px 10px rgba(0,0,0,.15);
+    margin-left: 1px;
+    color:#757575;
+    font-size: 20px;
+}
+
+.drop-show label{
+    display:block;
+    font-size:15px;
+    cursor: pointer;
+}
+
+.drop-show label :hover{
+   color:black;
+}
+.drop-show label input{
+    vertical-align: top;
+}
+.drop-show label span{
+    display:inline-block;
+}
+
+/*Maestros*/
+.drop-togglemaestros{
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    /* border-radius: 4px; */
+    color:#757575;
+    font-size: 20px;
+    cursor: pointer;
+    cursor: hand;
+    border: 1px solid #ccc;
+    width: 285px;
+    margin-right: 20px;
+    height: 46px;
+    text-align: left;
+}
+.drop-togglemaestros i{
+    float:right;
+}
+.drop-showmaestros {
+    padding: 8px;
+    width: 285px;
+    background-color: #FFF;
+    border: 1px solid #BABABA;
+    position: absolute;
+    z-index: 100;
+    margin-left: 1px;
+    color:#757575;
+    font-size: 20px;
+}
+.drop-showmaestros :hover{
+}
+.drop-showmaestros label{
+    display:block;
+    font-size:15px;
+    cursor: pointer;
+}
+.drop-showmaestros label input{
+    vertical-align: top;
+}
+.drop-showmaestros label span{
+    display:inline-block;
+}
+
+.parent-wrapper {
+    width:1250px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.parent {
+    display: flex;
+    flex-wrap:wrap;
+
+}
+.child {
+    display: inline-block;
+    flex-grow: 1;
+    margin-bottom: 60px;
+    height:100px;    
+    width: calc(100% * (1/4) - 10px - 1px)
+}
+
+.dp-hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+  }
+
+  :host /deep/  .ngb-dp-months {
+    display: flex;
+    background: white !important;
+}
+
+:host /deep/ ngb-datepicker {
+    border: 1px solid #dfdfdf;
+    border-radius: .25rem;
+    background: white !important;
+    display: inline-block;
+}
+
+:host /deep/  ngb-datepicker.dropdown-menu.show{
+    transform: translate(0px, 49px) !important;
+}
+

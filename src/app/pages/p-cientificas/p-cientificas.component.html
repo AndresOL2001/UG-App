@@ -1,0 +1,31 @@
+<div class="contenedorPrincipal">
+    <h1>Bienvenido:{{usuario}}</h1>
+
+    <div class="contenedorSection">
+        <div class="about container">
+
+            <div [routerLink]="'/crearProduccion'" class="containerEv">
+                <div class="about_Text">
+                    <p>Ingresa Producción cientifica <i class="fas fa-sign-in"></i></p>
+                </div>
+            </div>    
+
+            <div [routerLink]="'/produccionesCientificas/12912'" *ngIf="rol=='Maestro'" class="containerEv">
+                <div class="about_Text">
+                    <p>Mis Producciones cientificas <i class="fas fa-list"></i></p>
+                </div>
+            </div>    
+
+                <div [routerLink]="'/validacionProducciones'" *ngIf="rol=='Gestor'" class="containerEv">
+                    <div class="about_Text">
+                        <p>Valida Producción cientifica <i class="far fa-check-square"></i></p>
+                    </div>
+                </div>
+
+                <div [routerLink]="'/docentes'" *ngIf="rol=='Gestor'" class="containerEv">
+                    <div style="text-align: center;"class="about_Text">
+                        <p>Docentes <i class="fas fa-users"></i></p>
+                    </div>
+                </div>   
+        </div>
+    </div>    

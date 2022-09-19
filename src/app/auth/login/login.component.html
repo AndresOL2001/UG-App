@@ -1,0 +1,22 @@
+ <div class="contenedorPadre">
+    <form class="formulario">
+    
+    <h1>Ingresa tus credenciales</h1>
+     <div class="contenedor">
+     
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input [(ngModel)]="usuario" type="text" [ngModelOptions]="{standalone: true}" placeholder="Usuario">
+         </div>
+
+         
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+         <input [(ngModel)]="contrasena" type="password" [ngModelOptions]="{standalone: true}"placeholder="Contraseña">
+         
+         </div>
+         <button (click)="autenticar(usuario,contrasena)" style="text-align: center; margin-bottom: 20px;"  class="button">Iniciar Sesión</button>
+         <p>¿Olvidaste tu contraseña? <a [routerLink]="'/auth/recuperarContraseña'" class="link" style="cursor: pointer;">Has click aqui para recuperarla</a></p>
+     </div>
+    </form>
+</div>

@@ -1,0 +1,40 @@
+<div class="contenedor">
+        <h1 style="text-align: center;margin-bottom:25px;">Lista de maestros        
+             <i [routerLink]="'/crearDocente'" style="cursor: pointer;"class="far fa-plus"></i>
+        </h1>
+            <table style="margin: 0 auto;" class="styled-table">
+        
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Facultad</th>
+                <th>Modalidad Contrato</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produccion of misProducciones">
+                <td style="text-align: center;">18/9/2022</td>
+                <td>Pancho Perez</td>
+                <td style="text-align: center;">18/9/2022</td>
+                <td>Pancho Perez</td>
+                <td>
+                    <button [routerLink]="'/docentes/123'" style="text-align: center;" class="button">
+                        Editar
+                    </button>
+
+                </td>
+                <td>
+                    <button (click)="accion(produccion)" style="text-align: center;" class="button2">
+                        Eliminar
+                    </button>
+
+                </td>
+            </tr>
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</div>

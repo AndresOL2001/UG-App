@@ -1,0 +1,46 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.contenedorPadre{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-top: 220px;
+}
+.contenedor{
+    margin-bottom: 30px;
+}
+
+.button{
+    border: none;
+    width: 25%;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.button:hover{
+    background: cadetblue;
+}
+/*calenario*/
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+  }
+
+ 

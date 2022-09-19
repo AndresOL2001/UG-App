@@ -1,0 +1,92 @@
+<div class="contenedorPrincipal">
+  <section class="contenedorConsultas">
+
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a [routerLink]="'/consultasPublicas'" class="breadcrumbs__link">Consultas Publicas</a>
+      </li>
+
+    </ul>
+
+    <div class="contentdivsborder">
+      <div class="bordercontent">
+        <h3 style="margin-top: -36px;">Lineamientos y Requisitos <br> Para una buena P.Cientifica</h3>
+        <ul>
+          <li> <a target="_blank"href="https://ugye-my.sharepoint.com/:x:/g/personal/angel_plazav_ug_edu_ec/EQZa8aCZId1OkPCEMeXUwWUBw2f9p2J9VvfwBusj6G0rRg?rtime=R2eYp5OX2kg">Producción científica 2021 validada – (Publicado 28-01-2022) </a> </li>
+          <li> <a target="_blank"href="https://gifii.files.wordpress.com/2021/03/reglamento_general_de_regimen_de_investigacion1.pdf">Reglamento vigente de investigación – (Publicado 29-03-2021) </a> </li>
+          <li> <a target="_blank"href="https://gifii.files.wordpress.com/2021/03/lineas_de_investigacion_ug_2015-20215.pdf">Dominios y Líneas de investigación de la Universidad de Guayaquil 2015-2021 – (Publicado 29-03-2021) </a> </li>
+          <li> <a target="_blank"href="https://gifii.files.wordpress.com/2021/03/lineamientos_eventos_virtuales.pdf">Lineamientos para el Desarrollo de Eventos de Divulgación Científica de Forma Virtual – (Publicado 29-03-2021) </a> </li>
+          <li> <a target="_blank"href="https://gifii.files.wordpress.com/2021/03/lineamientos_auspicio_produccion_cientifica_alto_impacto_ug2.pdf">Lineamientos para el Auspicio de Producción Científica de Alto Impacto UG – (Publicado 29-03-2021) </a> </li>
+          <li> <a target="_blank"href="https://gifii.files.wordpress.com/2021/03/lineamiento_para_la_validacion_de_produccion_cientifica_ug2.pdf">Lineamientos de validación de producción científica </a> </li>
+          <li> <a target="_blank"href="https://gifii.files.wordpress.com/2021/03/anexo_f-ga-fin-df-015_-_check_list_inscripcion_publicaciones_ponencias_articulos1.xls">Lista de verificación de documentación para auspicio de Producción Científica  </a> </li>
+          <li> <a target="_blank"href="https://gifii.wordpress.com/proyectos-de-investigacion/#:~:text=Formato%20Certificado%20de%20Validaci%C3%B3n%20de%20Producci%C3%B3n%20Cient%C3%ADfica">Formato Certificado de Validación de Producción Científica </a> </li>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3>Cronograma recepcion de <br> produccion cientifica AAA</h3>
+        <ngb-datepicker class="readonly" #dp (dateSelect)="onDateSelection($event)" disabled [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden"  >
+        </ngb-datepicker>
+        
+        <ng-template  #t let-date let-focused="focused">
+          <span class="custom-day"
+                [class.focused]="focused"
+                [class.range]="isRange(date)"
+                [class.faded]="isHovered(date) || isInside(date)"
+                (mouseenter)="hoveredDate = date"
+                (mouseleave)="hoveredDate = null">
+            {{ date.day }}
+          </span>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="contenedor">
+      <div class="about container">
+        <h1>Producciones mas recientes</h1>
+        <div class="containerEv">
+          <div class="about_Text">
+            <h3 class="subtitle">Titulo 1</h3>
+            <a target="_blank" href="https://www.iiis.org/CDs2021/CD2021Spring/bookZ1.htm">Descarga El PDF Aqui</a>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus odit beatae molestias inventore
+              assumenda ipsum eveniet esse labore, eos amet mollitia deserunt sed quos consectetur nostrum alias
+              cupiditate atque deleniti quae distinctio dicta! Magnam soluta a quibusdam deleniti aliquid. Accusamus
+              saepe tempore quos nesciunt fugit possimus, itaque aspernatur sequi illo est sed illum unde nam quae minus
+              omnis modi iste velit numquam neque dignissimos consequatur. Assumenda earum porro quisquam excepturi ex
+              quos adipisci expedita voluptates nulla illo. Laborum, nesciunt placeat.</p>
+          </div>
+
+
+
+        </div>
+
+        <div class="containerEv">
+          <div class="about_Text">
+            <h3 class="subtitle">Titulo 1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus odit beatae molestias inventore
+              assumenda ipsum eveniet esse labore, eos amet mollitia deserunt sed quos consectetur nostrum alias
+              cupiditate atque deleniti quae distinctio dicta! Magnam soluta a quibusdam deleniti aliquid. Accusamus
+              saepe tempore quos nesciunt fugit possimus, itaque aspernatur sequi illo est sed illum unde nam quae minus
+              omnis modi iste velit numquam neque dignissimos consequatur. Assumenda earum porro quisquam excepturi ex
+              quos adipisci expedita voluptates nulla illo. Laborum, nesciunt placeat.</p>
+
+          </div>
+        </div>
+
+        <div class="containerEv">
+          <div class="about_Text">
+            <h3 class="subtitle">Titulo 1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus odit beatae molestias inventore
+              assumenda ipsum eveniet esse labore, eos amet mollitia deserunt sed quos consectetur nostrum alias
+              cupiditate atque deleniti quae distinctio dicta! Magnam soluta a quibusdam deleniti aliquid. Accusamus
+              saepe tempore quos nesciunt fugit possimus, itaque aspernatur sequi illo est sed illum unde nam quae minus
+              omnis modi iste velit numquam neque dignissimos consequatur. Assumenda earum porro quisquam excepturi ex
+              quos adipisci expedita voluptates nulla illo. Laborum, nesciunt placeat.</p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>

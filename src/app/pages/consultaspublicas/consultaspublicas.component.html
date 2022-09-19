@@ -1,0 +1,112 @@
+<div class="contenedor">
+	<div class="row">
+        <div class="col">
+            <input style="height: 45px;" #termino type="text" class="form-control" placeholder="Buscar Producción Cientifica">
+        </div>
+
+        <div class="contenedor-drops">
+
+            <div>
+                <button class="drop-toggle btn flat" (click)="showDropDown=!showDropDown">
+                    <span> {{maestroFiltro}}</span>
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="drop-show" *ngIf="showDropDown && listMaestro.length>0">
+                    <label (click)="getSelectedValue(a.name)" *ngFor="let a of listMaestro">
+                        <span>{{a.name}}</span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <button class="drop-toggle btn flat" (click)="showDropDownTipo=!showDropDownTipo">
+                    <span> {{tipoFiltro}}</span>
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="drop-show" *ngIf="showDropDownTipo && listTipo.length>0">
+                    <label (click)="getSelectedValueTipo(a.name)" *ngFor="let a of listTipo">
+                        <span>{{a.name}}</span>
+                    </label>
+                </div>
+            </div>
+
+            <div style="display: flex;position:relative;">
+                    <div >
+                      <div class="dp-hidden position-absolute">
+                          <input name="datepicker"
+                                 class="form-control"
+                                 ngbDatepicker
+                                 #datepicker="ngbDatepicker"
+                                 [autoClose]="'outside'"
+                                 (dateSelect)="onDateSelection($event)"
+                                 [displayMonths]="2"
+                                 [dayTemplate]="t"
+                                 outsideDays="hidden"
+                                 [startDate]="fromDate!"
+                                 tabindex="-1">
+                          <ng-template #t let-date let-focused="focused">
+                            <span class="custom-day"
+                                  [class.focused]="focused"
+                                  [class.range]="isRange(date)"
+                                  [class.faded]="isHovered(date) || isInside(date)"
+                                  (mouseenter)="hoveredDate = date"
+                                  (mouseleave)="hoveredDate = null">
+                              {{ date.day }}
+                            </span>
+                          </ng-template>
+                        </div>
+                      <div style="height:47px;padding-right: 20px;"  class="input-group">
+                        <input #dpFromDate
+                               class="form-control" placeholder="yyyy-mm-dd"
+                               name="dpFromDate"
+                               [value]="'Desde: '+formatter.format(fromDate)"
+                               (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
+                        <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div style="height:47px; padding-right: 20px;" class="input-group">
+                        <input #dpToDate
+                               class="form-control" placeholder="yyyy-mm-dd"
+                               name="dpToDate"
+                               [value]="'Hasta: '+formatter.format(toDate)"
+                               (input)="toDate = validateInput(toDate, dpToDate.value)">
+                        <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                      </div>
+                    </div>
+                  
+            </div>
+
+        </div>
+
+        <table style="margin: 0 auto;" class="styled-table">
+        
+            <thead>
+                <tr>
+                    <th>Fecha de publicación</th>
+                    <th>Tipo</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Publicación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let produccion of misProducciones">
+                    <td style="text-align: center;">18/9/2022</td>
+                    <td>{{produccion.tipo}}</td>
+                    <td>{{produccion.titulo}}</td>
+                    <td>Pancho Perez</td>
+                    <td>
+                        <button (click)="accion(produccion)" style="text-align: center;"  class="button">
+                            Visualizar
+                        </button>
+    
+                    </td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    
+    
+</div>

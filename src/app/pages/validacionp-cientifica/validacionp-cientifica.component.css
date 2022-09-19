@@ -1,0 +1,139 @@
+.contenedorPadre{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    margin-top: 220px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+.contenedor{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.contenedor-modal{
+  margin-left: 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.cerrarModal{
+    position: relative;
+    float: right;
+}
+.validacion{
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+ul {
+    list-style-type: none;
+    width: 500px;
+  }
+   
+  h1,h3{
+    text-align: center;
+    color: #1a2537;
+    margin-bottom: 20px;
+  }
+   
+  li img {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+   
+   
+  li {
+    padding: 10px;
+    overflow: auto;
+  }
+   
+  li:hover {
+    background: rgb(195, 218, 252);
+    cursor: pointer;
+  }
+
+  
+
+  .modalcontainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modalcontent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .formulario{
+    background: #fff;
+    padding: 3px;
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+    border: 1px solid #aaa;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+.button{
+    border: none;
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+      color: #1a2537;
+    font-weight: 600;
+}
+.link:hover{
+     color: cadetblue;
+}
+
+
+.centrar-boton{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}

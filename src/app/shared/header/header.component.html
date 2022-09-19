@@ -1,0 +1,75 @@
+
+<div class="contenedor_navbarBanner">
+<div class="banner">
+    <div class="banner__content">
+      <div class="banner__text">
+        <img class="imgLogo" src="../../../assets/img/portadaBanner.png" alt="logo:Universidad">
+    </div>
+      <button class="banner__close" type="button">
+        <span class="material-icons">
+          close
+        </span>
+      </button>
+    </div>
+  </div>
+
+
+
+<header class="header">
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a [routerLink]="'/inicio'" class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Inicio</a>
+        </li>
+
+        <li class="nav-menu-item">
+          <a [routerLink]="'/acercaDe'" class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Acerca de</a>
+        </li>
+
+
+ <!--        <li class="nav-menu-item right-menu">
+          <button [routerLink]="'/acercaDe'" class="menu-button">Acerca de</button>
+          <div class="dropdown-menu">
+            <a href="">Mision</a>
+            <a href="">Vision</a>
+            <a href="">Objetivos</a>
+          </div>
+       </li>
+   -->
+        <li class="nav-menu-item">
+          <a [routerLink]="'/eventos'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Eventos</a>
+        </li>
+
+        <li class="nav-menu-item">
+          <a [routerLink]="'/consultas'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Consultas</a>
+        </li>
+
+        <li class="nav-menu-item">
+          <a [routerLink]="'/contacto'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Contacto</a>
+        </li>
+
+        <li *ngIf="navbarService.rol=='Maestro' || navbarService.rol=='Gestor'" class="nav-menu-item">
+          <a [routerLink]="'/ajustes'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Ajustes</a>
+        </li>
+
+        <li *ngIf="navbarService.rol=='Maestro' || navbarService.rol=='Gestor'" class="nav-menu-item">
+          <a [routerLink]="'/producciones'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Producciones</a>
+        </li>
+
+      <li *ngIf="navbarService.rol!='Maestro' && navbarService.rol!='Gestor'" class="nav-menu-item">
+        <a [routerLink]="'/auth'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Iniciar Sesion</a>
+      </li>
+
+      <li *ngIf="navbarService.rol=='Maestro' || navbarService.rol=='Gestor'" class="nav-menu-item">
+        <a (click)="cerrarSesion()" [routerLink]="'/auth'"  class="nav-menu-link nav-link" routerLinkActive="nav-menu-link_active">Cerrar Sesión</a>
+      </li>
+
+      
+      
+      </ul>
+    </nav>
+  </header>
+</div>

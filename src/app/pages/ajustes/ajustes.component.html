@@ -1,0 +1,28 @@
+<div class="contenedorPrincipal">
+    <h1>Bienvenido:{{usuario}}</h1>
+
+    <div class="contenedorSection">
+        <div class="about container">
+
+            <div [routerLink]="'/cambiarPeriodo'"  *ngIf="rol=='Gestor'" class="containerEv">
+                <div class="about_Text">
+                    <p>Cambiar Periodo de Producciones <i class="fas fa-sign-in"></i></p>
+                </div>
+            </div>    
+
+            <div [routerLink]="'/auth/cambiarContraseña'" *ngIf="rol=='Maestro' || rol=='Gestor'" class="containerEv">
+                <div  class="about_Text">
+                    <p style="text-align: center;">Cambiar Tu Contraseña <i class="fas fa-lock"></i></p>
+                </div>
+            </div>
+            
+            <div [routerLink]="'/mensajes'" *ngIf="rol=='Gestor'" class="containerEv">
+                <div  class="about_Text">
+                    <p style="text-align: center;">Mensajes <i class="fas fa-inbox"></i></p>
+                </div>
+            </div>    
+
+               
+        </div>
+    </div>    
+</div>    

@@ -1,0 +1,568 @@
+<div class="contenedorPadre">
+    <div *ngIf="modalBool" #myModal class="modalcontainer">
+        <div class="modalcontent">
+            <div class="centrarModal">
+                <i style="cursor: pointer;" class="fas fa-times cerrarModal" (click)="close()"></i>
+                <div *ngIf="ArticuloActual">
+                    <h1>{{ArticuloActual.titulo}}</h1>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-database icon"></i>
+                            <input type="text" disabled [value]="'Base de datos: '+ArticuloActual.base_datos"
+                                placeholder="Base de datos indexada">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-keyboard icon"></i>
+                            <input type="text" disabled [value]="'Codigo ISBN: '+ArticuloActual.codigo_isnn"
+                                placeholder="Codigo ISNN">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-server icon"></i>
+                            <input type="text" disabled [value]="'Tipo de indexación: '+ ArticuloActual.tipo_indexacion"
+                                placeholder="Tipo de indexación">
+                        </div>
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-book-open icon"></i>
+                            <input type="text" disabled [value]="'Nombre de la revista: '+ArticuloActual.nombre_revista"
+                                placeholder="Nombre de la revista">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Numero de revista: '+ArticuloActual.numero_revista"
+                                placeholder="Numero de revista">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Quartil: '+ArticuloActual.quartil"
+                                placeholder="Quartil">
+                        </div>
+
+                    </div>
+
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'SJR: '+ArticuloActual.SJR" placeholder="SJR">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-calendar-check icon"></i>
+                            <input type="text" disabled
+                                [value]="'Fecha de publicación: '+ArticuloActual.fecha_publicacion"
+                                placeholder="Fecha de publicación">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-info-circle icon"></i>
+                            <input type="text" disabled [value]="'Campo detallado: '+ArticuloActual.campo_detallado"
+                                placeholder="Campo detallado">
+                        </div>
+
+
+
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-question icon"></i>
+                            <input type="text" disabled [value]="'Estado: '+ArticuloActual.estado" placeholder="Estado">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-link icon"></i>
+                            <input type="text" disabled
+                                [value]="'Link de publicación: '+ArticuloActual.link_publicacion"
+                                placeholder="Link de la publicación">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-link icon"></i>
+                            <input type="text" disabled [value]="'Link de la revista: '+ArticuloActual.link_revista"
+                                placeholder="Link de la revista">
+                        </div>
+                    </div>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Afiliación UG: '+ArticuloActual.afiliacion_ug"
+                                placeholder="Filiación UG">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-external-link-alt icon"></i>
+                            <input type="text" disabled
+                                [value]="'Dominio cientifico: '+ArticuloActual.dominio_cientifico"
+                                placeholder="Dominio Cientifico">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Linea de investigación: '+ArticuloActual.linea_investigacion"
+                                placeholder="Linea de investigación">
+                        </div>
+
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Sublinea de investigación: '+ArticuloActual.sublinea_investigacion"
+                                placeholder="Sublinea de investigación">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-heading icon"></i>
+                            <input type="text" disabled [value]="'Titulo: '+ArticuloActual.titulo"
+                                placeholder="Titulo del proyecto FCI">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="far fa-thumbs-up icon"></i>
+                            <input type="text" disabled [value]="'Validado: '+ArticuloActual.validado"
+                                placeholder="Validado CIGC">
+                        </div>
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-search icon"></i>
+                            <input type="text" disabled [value]="'Observaciones: '+ArticuloActual.observaciones"
+                                placeholder="Observación CIGC">
+                        </div>
+                    </div>
+
+                    <h1>Docentes involucrados</h1>
+                    <div *ngFor="let maestro of ArticuloActual.maestros" class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled [value]="maestro.nombre">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-list icon"></i>
+                            <input type="text" disabled [value]="maestro.participacion">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-school icon"></i>
+                            <input type="text" disabled [value]="maestro.facultad">
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="PonenciaActual">
+                    <h1>{{PonenciaActual.titulo}}</h1>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-keyboard icon"></i>
+                            <input type="text" disabled [value]="'Codigo UG: '+PonenciaActual.codigo_ug"
+                                placeholder="Codigo UG">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="far fa-user icon"></i>
+                            <input type="text" disabled [value]="'Nombre: '+PonenciaActual.titulo" placeholder="Nombre">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <i class="far fa-calendar-check icon"></i>
+                            <input type="text" disabled [value]="'Evento: '+PonenciaActual.evento" placeholder="Evento">
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-database icon"></i>
+                            <input type="text" disabled [value]="'Base de datos: '+PonenciaActual.base_datos"
+                                placeholder="Base de datos indexada">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-keyboard icon"></i>
+                            <input type="text" disabled [value]="'Codigo ISBN: '+PonenciaActual.codigo_isbn"
+                                placeholder="Codigo ISBN ISNN">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-server icon"></i>
+                            <input type="text" disabled [value]="'Tipo de Indexación: '+PonenciaActual.tipo_indexacion"
+                                placeholder="Tipo de Indexación">
+                        </div>
+
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="far fa-calendar-alt icon"></i>
+                            <input type="text" disabled [value]="'Edición del evento: '+PonenciaActual.edicion_evento"
+                                placeholder="Edición del evento">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Organizador del evento: '+PonenciaActual.organizador_evento"
+                                placeholder="Organizadór del evento">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="far fa-building icon"></i>
+                            <input type="text" disabled
+                                [value]="'Comite Organizadór: '+PonenciaActual.comite_organizador"
+                                placeholder="Comite Organizadór">
+                        </div>
+
+
+
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="far fa-flag icon"></i>
+                            <input type="text" disabled [value]="'Pais: '+PonenciaActual.pais" placeholder="Pais">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-city icon"></i>
+                            <input type="text" disabled [value]="'Ciudad: '+PonenciaActual.ciudad" placeholder="Ciudad">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-calendar-check icon"></i>
+                            <input type="text" disabled
+                                [value]="'Fecha de publicación: '+PonenciaActual.fecha_publicacion"
+                                placeholder="Fecha de publicación">
+                        </div>
+                    </div>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Quartil: '+PonenciaActual.quartil"
+                                placeholder="Quartil">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'SJR: '+PonenciaActual.SJR" placeholder="SJR">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-info-circle icon"></i>
+                            <input type="text" disabled [value]="'Campo detallado: '+PonenciaActual.campo_detallado"
+                                placeholder="Campo_Detallado">
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-link icon"></i>
+                            <input type="text" disabled
+                                [value]="'Link de publicación: '+PonenciaActual.link_publicacion"
+                                placeholder="Link de publicación">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-external-link-alt icon"></i>
+                            <input type="text" disabled
+                                [value]="'Dominio Cientifico: '+PonenciaActual.dominio_cientifico"
+                                placeholder="Dominio Cientifico">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Linea de investigación: '+PonenciaActual.linea_investigacion"
+                                placeholder="Linea de investigación">
+                        </div>
+
+
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Sublinea de investigación: '+PonenciaActual.sublinea_investigacion"
+                                placeholder="Sublinea">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-heading icon"></i>
+                            <input type="text" disabled [value]="'Titulo del proyecto: '+PonenciaActual.titulo"
+                                placeholder="Titulo de proyecto Fci">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="far fa-thumbs-up icon"></i>
+                            <input type="text" disabled [value]="'Validado CIGC: '+PonenciaActual.validado_cigc"
+                                placeholder="Validado CIGC">
+                        </div>
+
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-search icon"></i>
+                            <input type="text" disabled [value]="'Observación: '+PonenciaActual.observacion_cigc"
+                                placeholder="Observación CIGC">
+                        </div>
+                    </div>
+                    <h1>Docentes involucrados</h1>
+                    <div *ngFor="let maestro of PonenciaActual.maestros" class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled [value]="maestro.nombre">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-list icon"></i>
+                            <input type="text" disabled [value]="maestro.participacion">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-school icon"></i>
+                            <input type="text" disabled [value]="maestro.facultad">
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="LibroActual">
+                    <h1>{{LibroActual.titulo}}</h1>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Codigo UG:'+ LibroActual.codigo_ug">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-heading icon"></i>
+                            <input type="text" disabled [value]="'Titulo: '+LibroActual.titulo"
+                                placeholder="Titulo del libro">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Codigo ISBN: '+LibroActual.codigo_isbn"
+                                placeholder="Codigo ISBN">
+                        </div>
+
+
+
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-book-open icon"></i>
+                            <input type="text" disabled [value]="'Editor: '+LibroActual.editor" placeholder="Editor">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Numero de paginas: '+LibroActual.numero_paginas"
+                                placeholder="Número de paginas">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-calendar-check icon"></i>
+                            <input type="text" disabled [value]="'Fecha de publicación: '+LibroActual.fecha_publicacion"
+                                placeholder="Fecha de publicación">
+                        </div>
+
+                    </div>
+
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-link icon"></i>
+                            <input type="text" disabled [value]="'Link publicacion: '+LibroActual.link_publicacion"
+                                placeholder="Link de la publicación">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-info-circle icon"></i>
+                            <input type="text" disabled [value]="'Campo detallado: '+LibroActual.campo_detallado"
+                                placeholder="Campo detallado">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Afiliacion UG: '+LibroActual.afiliacion_ug"
+                                placeholder="Afiliación UG">
+                        </div>
+
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-check-double icon"></i>
+                            <input type="text" disabled [value]="'Revision por pares: '+LibroActual.revision_por_pares"
+                                placeholder="Revisión por pares">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-external-link-alt icon"></i>
+                            <input type="text" disabled [value]="'Dominio Cientifico: '+LibroActual.dominio_cientifico"
+                                placeholder="Dominio Cientifico">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Linea de investigación: '+LibroActual.linea_investigacion"
+                                placeholder="Linea de investigación">
+                        </div>
+                    </div>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled
+                                [value]="'Sublinea de investigación: '+LibroActual.sublinea_investigacion"
+                                placeholder="Sublinea de investigación">
+                        </div>
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-heading icon"></i>
+                            <input type="text" disabled [value]="'Titulo del proyecto: '+LibroActual.titulo_proyecto"
+                                placeholder="Titulo del proyecto FCI">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="far fa-thumbs-up icon"></i>
+                            <input type="text" disabled [value]="'Validado CIGC: '+LibroActual.validado_cigc"
+                                placeholder="Validado CIGC">
+                        </div>
+
+
+                    </div>
+                    <div class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-search icon"></i>
+                            <input type="text" disabled [value]="LibroActual.observacion_cigc"
+                                placeholder="Observación CIGC">
+                        </div>
+                    </div>
+
+                    <h1>Docentes involucrados</h1>
+                    <div *ngFor="let maestro of LibroActual.maestros" class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled [value]="maestro.nombre">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-list icon"></i>
+                            <input type="text" disabled [value]="maestro.participacion">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-school icon"></i>
+                            <input type="text" disabled [value]="maestro.facultad">
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="capituloLibroActual">
+                    <h1>{{capituloLibroActual.titulo}}</h1>
+                    <div class="contenedor-modal">
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled [value]="'Titulo del capitulo:'+ capituloLibroActual.titulo">
+                        </div>
+
+
+                        <div class="input-contenedor">
+                            <i class="fas fa-heading icon"></i>
+                            <input type="text" disabled [value]="'Titulo del libro: '+capituloLibroActual.titulo_libro"
+                                placeholder="Titulo del libro">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-sort-numeric-up-alt icon"></i>
+                            <input type="text" disabled
+                                [value]="'Numero de paginas: '+capituloLibroActual.numero_paginas"
+                                placeholder="Codigo ISBN">
+                        </div>
+                    </div>
+
+                    <h1>Docentes involucrados</h1>
+                    <div *ngFor="let maestro of capituloLibroActual.maestros" class="contenedor-modal">
+                        <div class="input-contenedor">
+                            <i class="fas fa-user-tie icon"></i>
+                            <input type="text" disabled [value]="maestro.nombre">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-list icon"></i>
+                            <input type="text" disabled [value]="maestro.participacion">
+                        </div>
+                        <div class="input-contenedor">
+                            <i class="fas fa-school icon"></i>
+                            <input type="text" disabled [value]="maestro.facultad">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor-modal">
+                    <textarea style="resize: none;" rows="15" cols="120" type="text" placeholder="Notas"></textarea>
+                </div>
+                <div class="validacion">
+                    <h1 style="margin-right: 15px; cursor:pointer;"><i class="fas fa-check "></i> Aceptar </h1>
+                    <h1 style="cursor:pointer;"> <i class="far fa-times-circle "></i> Rechazar </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;">Producciones Por Validar</h1>
+
+    <div class="contenedor">
+
+        <ul>
+            <h1>Articulos</h1>
+
+            <li (click)="abrirModalArticulo(articulo)" *ngFor="let articulo of listaArticulos">
+                <h3>{{articulo.titulo}}</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </li>
+        </ul>
+
+
+        <ul>
+            <h1>Ponencias</h1>
+
+            <li (click)="abrirModalPonencia(ponencia)" *ngFor="let ponencia of listaPonencias">
+                <h3>{{ponencia.titulo}}</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </li>
+        </ul>
+
+
+        <ul>
+            <h1>Libros</h1>
+
+            <li (click)="abrirModalLibro(libro)" *ngFor="let libro of listaLibros">
+                <h3>{{libro.titulo}}</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </li>
+        </ul>
+        <ul>
+            <h1>Capitulo de libros</h1>
+
+            <li (click)="abrirModalCapituloLibro(capitulo)" *ngFor="let capitulo of listaCapituloLibros">
+                <h3>{{capitulo.titulo}}</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </li>
+        </ul>
+
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="contenedorPadre">
+    <form class="formulario">
+    
+    <h1>Correo electronico asociado a su cuenta</h1>
+     <div class="contenedor">
+     
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input #id type="text" placeholder="Correo Electronico">
+         </div>
+
+        
+         <button (click)="enviarCorreoRecuperacion(id.value)" style="text-align: center; margin-bottom: 20px;" class="button">Enviar Correo de recuperación</button>
+         <p><a [routerLink]="'/auth/login'" class="link" style="cursor: pointer;">Regresar a inicio de sesión</a></p>
+     </div>
+    </form>
+</div>

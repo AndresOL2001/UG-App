@@ -1,0 +1,28 @@
+<div class="contenedorPadre">
+    <h1>Mis Producciones Cientificas</h1>
+    <div style="margin-top:20px;">
+    <table style="margin: 0 auto;" class="styled-table">
+        
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Estado</th>
+                <th>Publicación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produccion of misProducciones">
+                <td>{{produccion.titulo}}</td>
+                <td>{{produccion.validacion}}</td>
+                <td>
+                    <button (click)="accion(produccion)" style="text-align: center;"  class="button">
+                        {{produccion.publicacion}}
+                    </button>
+
+                </td>
+            </tr>
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</div>
+</div>
